@@ -5,3 +5,8 @@
 #   email: bob@gmail.com
 #   password: secret
 #   fullname: Bob
+
+Snippet(foo):
+    content: def foo; puts 'hello world'; end
+    language: ruby
+    keep: true
