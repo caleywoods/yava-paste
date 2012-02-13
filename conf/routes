@@ -13,3 +13,6 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+# define admin routes for CRUD
+*      /admin                                   module:crud

@@ -1,4 +1,20 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+#{if allSnippets}
+    #{list items:allSnippets, as: 'snippet'}
+        <div class="snippet">
+            <div class="snippet-metadata">
+              <span class="language">${snippet.language}</span>
+                <br />
+              <span class="content">
+                  <pre>${snippet.content}</pre>
+              </span>
+    #{/list}
+#{/if}
+
+#{else}
+    <div class="empty">
+        There are currently no snippets.
+    </div>
+#{/else}
